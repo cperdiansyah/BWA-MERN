@@ -71,20 +71,17 @@ header {
     }
     ul.navbar-nav {
       li.nav-item {
-        &.active {
-          a.nav-link {
-            color: $primary;
-          }
+        a.active {
+          color: $primary;
         }
+
         a {
-          &.nav-link {
-            letter-spacing: 1px;
-            color: $gray-900;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            &:hover {
-              text-decoration: underline;
-            }
+          letter-spacing: 1px;
+          color: $gray-900;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          a:hover {
+            text-decoration: underline;
           }
         }
       }

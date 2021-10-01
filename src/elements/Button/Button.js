@@ -31,26 +31,30 @@ export default function Button(props) {
     );
   }
 
-  if (props.type == 'link') {
+  if (props.type === 'link') {
     if (props.isExternal) {
       return (
         <a
           href={props.href}
           className={className.join(' ')}
           style={props.style}
-          target={props.target == '_blank' ? '_blank' : undefined}
+          target={props.target === '_blank' ? '_blank' : undefined}
           rel="noopener noreferrer"
         >
           {props.children}
         </a>
       );
     } else {
-      <NavLink
-        to={props.href}
-        className={className.join(' ')}
-        style={props.style}
-        onClick={onClick}
-      ></NavLink>;
+      return (
+        <NavLink
+          to={props.href}
+          className={className.join(' ')}
+          style={props.style}
+          onClick={onClick}
+        >
+          {props.children}
+        </NavLink>
+      );
     }
   }
 
