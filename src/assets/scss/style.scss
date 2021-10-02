@@ -58,6 +58,7 @@
 }
 
 header {
+  margin-bottom: 50px;
   border-bottom: 1px solid $gray-200;
   width: 100%;
   position: relative;
@@ -80,6 +81,7 @@ header {
           color: $gray-900;
           padding-left: 1rem;
           padding-right: 1rem;
+          font-weight: 500;
           a:hover {
             text-decoration: underline;
           }
@@ -106,6 +108,7 @@ section {
 }
 
 .card {
+  height: 100%;
   &.bordered {
     border: 1px solid $gray-200;
   }
