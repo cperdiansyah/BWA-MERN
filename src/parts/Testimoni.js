@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import Fade from 'react-reveal/Fade';
+
 import Star from 'elements/Star';
 import Button from 'elements/Button';
 
@@ -7,48 +9,53 @@ import TestimoniAccent from 'assets/images/testimonial-landingpages-frame.jpg';
 
 export default function Testimoni(data) {
   return (
-    <div className="container">
-      <div className="row align-items-center">
-        <div className="col-auto" style={{ marginRight: 60 }}>
-          <div className="testimonial-hero" style={{ margin: '30px 0 0 30px' }}>
-            <img
-              src={data.data.imageUrl}
-              alt="testimonial"
-              className="position-absolute"
-              style={{ zIndex: 1 }}
-            />
-            <img
-              src={TestimoniAccent}
-              alt="testimonial"
-              className="position-absolute"
-              style={{ margin: '-30px 0 0 -30px' }}
-            />
-          </div>
-        </div>
-        <div className="col">
-          <h4 style={{ marginBottom: 40 }}>{data.data.name}</h4>
-          <Star value={data.data.rate} width={35} height={35} spacing={4} />
-
-          <h5 className="h2 font-weight-light line-height-2 my-3">
-            {data.data.content}
-          </h5>
-          <span className="text-gray-500">
-            {data.data.familyName}, {data.data.familyOccupation}
-          </span>
-          <div>
-            <Button
-              className="btn px-5"
-              style={{ marginTop: 40 }}
-              hasShadow
-              isPrimary
-              type="link"
-              href={`/testimonial/${data.data._id}`}
+    <Fade bottom>
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-auto" style={{ marginRight: 60 }}>
+            <div
+              className="testimonial-hero"
+              style={{ margin: '30px 0 0 30px' }}
             >
-              Read Their Story
-            </Button>
+              <img
+                src={data.data.imageUrl}
+                alt="testimonial"
+                className="position-absolute"
+                style={{ zIndex: 1 }}
+              />
+              <img
+                src={TestimoniAccent}
+                alt="testimonial"
+                className="position-absolute"
+                style={{ margin: '-30px 0 0 -30px' }}
+              />
+            </div>
+          </div>
+          <div className="col">
+            <h4 style={{ marginBottom: 40 }}>{data.data.name}</h4>
+            <Star value={data.data.rate} width={35} height={35} spacing={4} />
+
+            <h5 className="h2 font-weight-light line-height-2 my-3">
+              {data.data.content}
+            </h5>
+            <span className="text-gray-500">
+              {data.data.familyName}, {data.data.familyOccupation}
+            </span>
+            <div>
+              <Button
+                className="btn px-5"
+                style={{ marginTop: 40 }}
+                hasShadow
+                isPrimary
+                type="link"
+                href={`/testimonial/${data.data._id}`}
+              >
+                Read Their Story
+              </Button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 }
