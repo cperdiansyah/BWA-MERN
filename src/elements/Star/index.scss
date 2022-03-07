@@ -6,7 +6,7 @@
   .star {
     position: absolute;
     display: inline-flex;
-    mask: url(../../assets/images/icons/icon_cities.svg) no-repeat center left;
+    mask: url(../../assets/images/icons/icon_star.svg) no-repeat center left;
     &:not(.placeholder) {
       z-index: 2;
 

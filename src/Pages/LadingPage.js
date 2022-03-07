@@ -22,7 +22,8 @@ export default class LadingPage extends Component {
           refMostPicked={this.refMostPicked}
         />
         <Categories data={landingPage.categories}></Categories>
-        <Testimoni></Testimoni>
+        <Testimoni data={landingPage.testimonial} />
+       
       </>
     );
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from 'elements/Button/Button';
+import Button from 'elements/Button';
 import Brandicon from './iconText';
 
 import propTypes from 'prop-types';

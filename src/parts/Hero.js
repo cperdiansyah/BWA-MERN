@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Button from 'elements/Button/Button';
+import Button from 'elements/Button';
 
 import imgHero from 'assets/images/img_hero.jpg';
 import frameHero from 'assets/images/frame_hero.png';

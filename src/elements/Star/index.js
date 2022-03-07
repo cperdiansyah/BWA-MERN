@@ -1,52 +1,50 @@
 import React from 'react';
+
 import propTypes from 'prop-types';
+
 import './index.scss';
-export default function Star(className, value, height, width, spacing) {
-  const decimal = Number(value) % 1;
+export default function Star({ className, value, height, width, spacing }) {
+  const decimals = Number(value) % 1;
+
   const star = [];
   let leftPos = 0;
-
-  for (let index = 0; index < 5 && index < value - decimal; index++) {
+  for (let index = 0; index < 5 && index < value - decimals; index++) {
     leftPos = leftPos + width;
     star.push(
       <div
         className="star"
         key={`star-${index}`}
         style={{
-          heigh: height,
           left: index * width,
+          height: height,
           width: width,
           marginRight: spacing,
         }}
       ></div>
     );
   }
-
-  if (decimal > 0 && value <= 5) {
+  if (decimals > 0 && value <= 5)
     star.push(
       <div
         className="star"
         key={`starWithDecimal`}
         style={{
-          heigh: height,
           left: leftPos,
-          width: decimal * width - spacing,
+          height: height,
+          width: decimals * width - spacing,
         }}
       ></div>
     );
-  }
 
   const starPlaceholder = [];
-
   for (let index = 0; index < 5; index++) {
-    leftPos = leftPos + width;
-    star.push(
+    starPlaceholder.push(
       <div
         className="star placeholder"
         key={`starPlaceholder-${index}`}
         style={{
-          heigh: height,
           left: index * width,
+          height: height,
           width: width,
           marginRight: spacing,
         }}
